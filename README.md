@@ -64,3 +64,6 @@ Il faut pouvoir faire passer toutes les propriétés à **OK**, pour cela il fau
 Il faut aussi **faire en sorte que le hot reload fonctionne pour l'application web avec docker compose**.
 
 Il faut utiliser un volume pour les données de la base MySQL.
+
+## RESULTATS
+![image](https://github.com/MatisGalvin/dummy-app-tp2/assets/72927745/8206f3f8-9dc6-455e-ab2d-78755db878d2)
