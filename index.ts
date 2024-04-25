@@ -92,5 +92,5 @@ app.get("/", async (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-  console.log(`Dummy app listening on port ${port}`);
+  console.log(`Dummy app matis port ${port}`);
 });

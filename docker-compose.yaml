@@ -7,6 +7,8 @@ services:
     environment:
       - MYSQL_DB=mysql
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    volumes:
+      - mysqldata:/var/lib/mysql
 
   # service pour redis
   redis:
@@ -22,6 +24,8 @@ services:
     user: "400:400"
     ports:
       - "8080:1337"
+    volumes:
+      - ./index.ts:/app/index.ts:ro
     environment:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_PORT=${MYSQL_PORT}
@@ -30,4 +34,5 @@ services:
       - MYSQL_DB=${MYSQL_DB}
       - PORT=${PORT}
       - FILE_PATH_TO_CHECK=${FILE_PATH_TO_CHECK}
-    
+volumes:
+  mysqldata:
