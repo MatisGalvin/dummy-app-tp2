@@ -1,0 +1,33 @@
+# Déclaration des services
+
+services:
+  # service pour mysql
+  mysql:
+    image: mysql:8.3.0
+    environment:
+      - MYSQL_DB=mysql
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+
+  # service pour redis
+  redis:
+    image: redis:7
+
+  # service application web
+  my_app:
+    hostname: mydocker
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    user: "400:400"
+    ports:
+      - "8080:1337"
+    environment:
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - MYSQL_DB=${MYSQL_DB}
+      - PORT=${PORT}
+      - FILE_PATH_TO_CHECK=${FILE_PATH_TO_CHECK}
+    
