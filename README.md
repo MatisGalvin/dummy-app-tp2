@@ -67,3 +67,4 @@ Il faut utiliser un volume pour les données de la base MySQL.
 
 ## RESULTATS
 ![image](https://github.com/MatisGalvin/dummy-app-tp2/assets/72927745/8206f3f8-9dc6-455e-ab2d-78755db878d2)
+![image](https://github.com/MatisGalvin/dummy-app-tp2/assets/72927745/b56d4b8f-04be-47b5-9780-7ce4e37774c0)
